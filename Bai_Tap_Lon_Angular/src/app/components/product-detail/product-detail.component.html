@@ -1,0 +1,36 @@
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="http://localhost:3002/image/{{product.image}}" style="width: 500px;" height="250px" alt="">
+        </div>
+        <div class="col-md-6">
+            <div class="container">
+                <h3>Tên sản phẩm: {{product.name}}</h3> 
+                <h4> Giá sản phẩm: {{product.price | currency: "":"":"5.0"}} vnđ </h4>
+               <div [innerHTML]="product.description"></div>
+                <form action="" method="POST" class="form-inline" role="form">
+                    <div class="form-group">
+                        <label class="sr-only" for="">label</label>
+                        <input type="email" class="form-control" id="" placeholder="Input field">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add to cart</button>
+                    <button type="submit" class="btn btn-danger">Yêu thích</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<hr>

@@ -1,0 +1,76 @@
+
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+
+<h2>Giỏ hàng</h2>
+<div *ngIf="carts.length">
+    <div class="container">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Ảnh</th>
+                    <th>Tên SP</th>
+                    <th>Giá SP</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cart of carts; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td><img src="http://localhost:3002/image/{{cart.image}}" width="50px"></td>
+                    <td>{{cart.name}}</td>
+                    <td>{{cart.price}}</td>
+                    <td>
+                        <input (change)="updateQtt(i, $event)" type="number" [value]="cart.quantity" style="width: 40px;">
+                    </td>
+                    <td>{{cart.price * cart.quantity}}</td>
+    
+                    <!-- <td>{{subTotal(cart)}}</td> -->
+                    <td>
+                        <button class="btn btn-sm btn-danger"(click)="removeCart(i)" >Xóa</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <!-- <div class="text-center">
+            <h3>Tổng số lượng: {{totalQuantity}}</h3>
+            <h3>Tổng thanh toán: {{totalPrice}}</h3>
+            <a routerLink="/" class="mua">Tiếp tục mua hàng</a>
+            <a href="mua" class="">Đặt hàng</a>
+            <button class="button" (click)="onClearCart()">Xóa hết giỏ hàng</button>
+            
+        
+        </div> -->
+    </div>
+    
+    <div class="alert alert-danger" *ngIf="carts.length == 0">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <strong>Giỏ hàng trống</strong> <a routerLink="/" >click vào đây</a> để tiếp tục mua hàng ...
+    </div>
+    
+    
+    <hr>
+
+</div>
+<div class="text-center">
+    <a routerLink="/" class="btn btn-primary " >Tiếp tục mua hàng</a>
+    <button class="btn btn-danger " (click)="clearCart()" href="">Xóa hết giỏ hàng</button>
+    <h3>Tổng số lượng: {{totalQuantity}}</h3>
+    <h3>Tổng thanh toán: {{totalPrice}}</h3>
+    <a routerLink="/" class="mua">Tiếp tục mua hàng</a>
+    <a href="mua" class="">Đặt hàng</a>
+</div>
+
+<div class="alert alert-danger " *ngIf="carts.length == 0">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <strong>Giỏ hàng rỗng!!</strong> <a routerLink="/" class="btn btn-primary " >Click vào đây Tiếp tục mua hàng</a>
+</div>

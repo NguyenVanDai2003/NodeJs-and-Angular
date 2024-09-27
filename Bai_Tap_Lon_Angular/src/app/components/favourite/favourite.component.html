@@ -1,0 +1,27 @@
+<div style="height: 200px;"></div>
+<div class="lastest-products my-5" >
+
+    <div class="row">
+
+        <div class="col-md-4 product-item" *ngFor="let pro of favourite">
+            <div class="product-icon">
+               
+                <button href="" class="btn btn-danger" (click)="remoFavourite(pro.id)"> Bỏ thích</button>
+                <a href="product-detail.html" class="btn btn-primary"><i
+                        class="fa-solid fa-share"></i></a>
+            </div>
+            <div class="card text-center">
+                <img class="card-img-top"
+                    src="http://localhost:3000/images/{{pro.image}}" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a [routerLink]="['/product', pro.id]">{{pro.name}}</a>
+                    </h4>
+                    <p class="card-text"><s>Giá cũ: {{pro.price | currency:"":""}} đ</s> <b> Giá mới: {{pro.price | currency:"":""}} đ</b></p>
+                </div>
+                <a href="" class="btn-add-cart btn btn-success btn-block">Add To Cart</a>
+            </div>
+        </div>
+       
+    </div>
+</div>

@@ -1,0 +1,9 @@
+body {
+    background: #fff !important;
+    color: 333 !important;
+ }
+ @media all and (max-width: 320px ) {
+    body  {
+       background: #e7e7e7 !important ;
+    }
+ }

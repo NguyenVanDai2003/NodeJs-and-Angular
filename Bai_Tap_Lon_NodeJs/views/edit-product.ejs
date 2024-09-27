@@ -1,0 +1,35 @@
+<%- include('header')%>
+
+            <div class="container">
+                
+                
+                <form action="" method="post" role="form">
+                    <legend>Thêm danh mục</legend>
+                
+                    <div class="form-group">
+                        <label for="">label</label>
+                        <input type="text" name="name" class="form-control" id="" value="<%= pros.name %>">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="">trạng thái danh mục</label>
+                       
+                       <div class="radio">
+                        <label>
+                            <input type="radio" name="status" id="input" value="1" <%= pros.status == 1 ? "checked":"" %>  > 
+                            Hiển thị
+                        </label>
+                       </div>
+                       
+                       <div class="radio">
+                        <label>
+                            <input type="radio" name="status" id="input" value="0" <%= pros.status == 0 ? "checked":"" %> >
+                            Tạm ẩn
+                        </label>
+                       </div>
+                       
+                    </div>
+                
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+<%- include('footer')%>

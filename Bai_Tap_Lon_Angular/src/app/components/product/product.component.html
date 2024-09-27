@@ -1,0 +1,196 @@
+<div style="height: 120px;"></div>
+
+<div class="container py-3">
+  <div class="main__tabnine">
+    <div class="grid wide">
+        <!-- Tab items -->
+        <div class="tabs">
+            <div class="tab-item active">
+                Bán Chạy
+            </div>
+            <div class="tab-item">
+                Giá tốt
+            </div>
+            <div class="tab-item">
+                Mới Nhập
+            </div>
+            <div class="line"></div>
+        </div>
+        <!-- Tab content -->
+        <div class="tab-content">
+            <div class="tab-pane active">
+                <div class="row">
+                    <div class="col l-2 m-4 s-6" *ngFor="let pro of products">
+                        <div class="product">
+                            <div class="product__avt"
+                                style="background-image: url(http://localhost:3002/image/{{pro.image}});">
+                            </div>
+                            <div class="product__info">
+                                <h3 class="product__name">
+                                    <a style="margin-top: 300px;" [routerLink]="['/product-detail', pro.id]">{{pro.name}}</a></h3>
+                                <div class="product__price">
+                                    <div class="price__old">
+                                        <p> {{pro.price}}đ </p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="btn btn-danger">
+                                    <i  class="fa fa-heart"></i>
+                                </div>
+                               
+                            </div>
+                           <div class="hover_towr">
+                            <a (click)="showdt(pro)"  class="viewDetail" style="cursor: pointer;" >Xem chi tiết</a>
+                            <button (click)="addToCart(pro)" class="addToCart">Thêm vào
+                                giỏ</button>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Sản phẩm nổi bật chưa hoàn thiện -->
+<div class="main__frame">
+  <div class="grid wide">
+      <h3 class="category__title">Văn Đại Cometics</h3>
+      <h3 class="category__heading">SẢN PHẨM NỔI BẬT</h3>
+      <div class="row">
+          <div class="col-md-3">
+              <div class="jumbotron">
+                  <div class="container">
+                      <div class="product">
+                          <div class="product__avt" style="background-image: url(http://icdn.dantri.com.vn/zoom/1200_630/2019/05/18/ca-chua-1558139604071.jpg);">
+                          </div>
+                          <div class="product__info">
+                              <h3 class="product__name">Cà chua nè</h3>
+                              <div class="product__price">
+                                  <div class="price__old">
+                                      300.000đ
+                                  </div>
+                                  <div class="price__new">150.000đ</div>
+                              </div>
+                              <div class="product__sale">
+                                  <span class="product__sale-percent">50%</span>
+                                  <span class="product__sale-text">Giảm</span>
+                              </div>
+                          </div>
+                          <a href="product.html" class="viewDetail">Xem chi tiết</a>
+                          <a href="cart.html" class="addToCart">Thêm vào giỏ</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="jumbotron">
+                  <div class="container">
+                      <div class="product">
+                          <div class="product__avt" style="background-image: url(https://media.baoquangninh.com.vn/dataimages/202104/original/images1497450_quyt.jpg);">
+                          </div>
+                          <div class="product__info">
+                              <h3 class="product__name">Quýt</h3>
+                              <div class="product__price">
+                                  <div class="price__old">
+                                      600.000đ
+                                  </div>
+                                  <div class="price__new">300.000đ</div>
+                              </div>
+                              <div class="product__sale">
+                                  <span class="product__sale-percent">50%</span>
+                                  <span class="product__sale-text">Giảm</span>
+                              </div>
+                          </div>
+                          <a href="product.html" class="viewDetail">Xem chi tiết</a>
+                          <a href="cart.html" class="addToCart">Thêm vào giỏ</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="jumbotron">
+                  <div class="container">
+                      <div class="product">
+                          <div class="product__avt" style="background-image: url(https://toigingiuvedep.vn/wp-content/uploads/2021/08/tong-hop-hinh-anh-qua-dau-tay-do-mong-dep-va-dang-yeu-nhat.jpg);">
+                          </div>
+                          <div class="product__info">
+                              <h3 class="product__name">Dâu tây loại 1</h3>
+                              <div class="product__price">
+                                  <div class="price__old">
+                                      300.000đ
+                                  </div>
+                                  <div class="price__new">200.000đ</div>
+                              </div>
+                              <div class="product__sale">
+                                  <span class="product__sale-percent">50%</span>
+                                  <span class="product__sale-text">Giảm</span>
+                              </div>
+                          </div>
+                          <a href="product.html" class="viewDetail">Xem chi tiết</a>
+                          <a href="cart.html" class="addToCart">Thêm vào giỏ</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="jumbotron">
+                  <div class="container">
+                      <div class="product">
+                          <div class="product__avt" style="background-image: url(http://icdn.dantri.com.vn/zoom/1200_630/2019/05/18/ca-chua-1558139604071.jpg);">
+                          </div>
+                          <div class="product__info">
+                              <h3 class="product__name">Cà chua nè</h3>
+                              <div class="product__price">
+                                  <div class="price__old">
+                                      300.000đ
+                                  </div>
+                                  <div class="price__new">150.000đ</div>
+                              </div>
+                              <div class="product__sale">
+                                  <span class="product__sale-percent">50%</span>
+                                  <span class="product__sale-text">Giảm</span>
+                              </div>
+                          </div>
+                          <a href="product.html" class="viewDetail">Xem chi tiết</a>
+                          <a href="cart.html" class="addToCart">Thêm vào giỏ</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+  </div>
+</div>
+<!-- Sales Policy -->
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true" *ngIf="proDetail ">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Chi tiết sản phẩm</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card text-left">
+                          <img class="card-img-top" src="http://localhost:3002/i{{proDetail.image}}" alt="">
+                          </div>
+                    </div>
+                    <div class="col-md-7">
+                        <h3>Tên sản phẩm: {{proDetail.name}}</h3>
+                        <h4>Giá sản Phẩm: <s>Giá cũ:{{proDetail.price}}</s> <b>Sale_price{{proDetail.sale_price}}</b></h4>
+                        <p>Giới thiệu sản phẩm: </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

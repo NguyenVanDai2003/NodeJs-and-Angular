@@ -1,0 +1,355 @@
+<div class=" py-2">
+    <div id="banner" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#banner" data-slide-to="0" class="active"></li>
+            <li data-target="#banner" data-slide-to="1"></li>
+            <li data-target="#banner" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <img class="w-100"
+                    src="https://img.freepik.com/premium-psd/vegetable-grocery-delivery-promotion-web-banner-facebook-cover-instagram-template_502896-109.jpg?w=2000"
+                    alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3 class="text-dark">Welcome to ShoppeNow</h3>
+                    <p>Chú trọng vào việc giới thiệu lợi ích của sản phẩm</p>
+                    <a class="btn btn-danger"> Shop now</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100"
+                    src="https://img.freepik.com/premium-psd/vegetable-grocery-delivery-promotion-web-banner-facebook-cover-instagram-template_502896-109.jpg?w=2000"
+                    alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Magni alias id fugit? Iste natus
+                        laboriosam rem
+                        nostrum nisi suscipit molestias eius, impedit esse
+                        libero totam quisquam. Eaque molestias porro
+                        ipsum?</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100"
+                    src="https://img.freepik.com/premium-psd/vegetable-grocery-delivery-promotion-web-banner-facebook-cover-instagram-template_502896-109.jpg?w=2000"
+                    alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Title</h3>
+                    <p>lorem ipsum dolor sit amet, consectetur adip</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#banner" role="button"
+            data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#banner" role="button"
+            data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<div class="container py-3">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="container">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-3">Thông tin Shop</h1>
+                        <p class="lead">Hàng thật giá thật</p>
+                        <div class="product__avt product"
+                            style="background-image: url(https://minhnguyenhn.com/wp-content/uploads/2018/06/cach-chon-trai-cay-nhap-khau-tuoi-sach-5.jpg);">
+                        </div>
+
+                        <p>
+                            Loại thực phẩm tốt cho sức khỏe, bổ sung nhiều
+                            vitamin, dưỡng chất, cung cấp cho cơ thể con
+                            người năng lượng quý giá thay vì rượu, hoa và một số
+                            quà tặng khác. Không chỉ vậy, sử dụng
+                            hộp quà trái cây làm quà tặng cũng chính là cách để
+                            chúng ta góp phần bảo vệ môi trường.Bên
+                            cạnh đó, Giỏ quà hoa quả nhập khẩu - TC54 còn biểu
+                            trưng cho sự đầy đặn, sung túc, màu sắc
+                            hòa quyện vào nhau tạo nên một hình ảnh thật đẹp
+                            mắt.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-4" boder="1px">
+            <h2>Danh mục</h2>
+            <ul class="list-group">
+                <a routerLink="/category/{{cat.id}}" class="list-group-item"
+                    *ngFor="let cat of cats">{{cat.name}}</a>
+            </ul>
+            <hr>
+            <div class="jumbotron">
+                <h2>Dâu tây nhập khẩu</h2>
+                <h4>다른 의미의 동음이의어에 대한 내용은 딸기(동음이의어) 문서를 참고하십시오.</h4>
+                <div class="col l-2 m-4 s-6">
+                    <div class="product">
+
+                        <div class="product__avt"
+                            style="background-image: url(https://hoaquafuji.com/storage/app/media/dau-tay-han-quoc-fuji-4.jpg);">
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__name">Dâu tây Hàn Quốc</h3>
+                            <div class="product__price">
+                                <div class="price__old">
+                                    600.000đ
+                                </div>
+                                <div class="price__new">450.000đ </div>
+                            </div>
+                            <div class="product__sale">
+                                <span class="product__sale-percent">25%</span>
+                                <span class="product__sale-text">Giảm</span>
+                            </div>
+                        </div>
+                        <a href="https://vinfruits.com/dau-tay-han-quoc-hop"
+                            class="viewDetail">Xem chi tiết</a>
+                        <a href="cart.html" class="addToCart">Thêm vào giỏ</a>
+                    </div>
+                </div>
+                <p>재배종 딸기가 나오기 이전에도 Fragaria속 중에는 '흰땃딸기'[1]나 사향딸기처럼 먹을만한 야생딸기가
+                    존재했으나, 대부분 극지와 가까운 고위도 지역이나 고산지대에서 자라는
+                    종들이었고 고온에 약했으므로 일반적인 온대 지역에서 인공적으로 키우기 부적합했다.</p>
+
+                <p>지금 우리가 먹는 빨갛고 도톰한 딸기는 실제로는 만들어진지 200년 정도밖에 되지 않았다. 현재의 딸기는 다른
+                    식용품들[2]과 마찬가지로 인간이 인위적으로 만든 것이다. </p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="main__tabnine">
+        <div class="grid wide">
+            <!-- Tab items -->
+            <div class="tabs">
+                <div class="tab-item active">
+                    Bán Chạy
+                </div>
+                <div class="tab-item">
+                    Giá tốt
+                </div>
+                <div class="tab-item">
+                    Mới Nhập
+                </div>
+                <div class="line"></div>
+            </div>
+            <!-- Tab content -->
+            <div class="tab-content">
+                <div class="tab-pane active">
+                    <div class="row">
+                        <div class="col l-2 m-4 s-6"
+                            *ngFor="let pro of products">
+                            <div class="product">
+                                <div class="product__avt"
+                                    style="background-image: url(http://localhost:3002/image/{{pro.image}});">
+                                </div>
+                                <div class="product__info">
+                                    <h3 class="product__name" style="margin-top: 50px;">
+                                        <a 
+                                            [routerLink]="['/product-detail', pro.id]">{{pro.name}}</a>
+                                    </h3>
+                                    <div class="product__price">
+                                        <div class="price__old">
+                                            <p>Giá: {{pro.price}}đ </p>
+                                        </div>
+                                        
+                                        <div class="price__new">
+                                            <p>
+                                                Khuyến mãi:{{pro.sale_price}}đ</p>
+                                        </div>
+                                    </div>
+                                    <div class="btn btn-danger"
+                                        (click)="addFavorite(pro.id)">
+                                        <i class="fa fa-heart"></i>
+                                    </div>
+
+                                    <div class="product__sale">
+                                        <span
+                                            class="product__sale-percent">25%</span>
+                                        <span
+                                            class="product__sale-text">Giảm</span>
+                                    </div>
+                                </div>
+                                <a (click)="showdt(pro)" class="viewDetail"
+                                    style="cursor: pointer;">Xem chi tiết</a>
+                                <button (click)="addToCart(pro)" class="addToCart">Thêm vào
+                                    giỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Sản phẩm nổi bật chưa hoàn thiện -->
+<!-- Sản phẩm nổi bật -->
+<div class="main__frame">
+    <div class="grid wide">
+        <h3 class="category__title">Văn Đại Cometics</h3>
+        <h3 class="category__heading">SẢN PHẨM NỔI BẬT</h3>
+        <div id="product-list" class="row">
+        </div>
+        <!-- Phân trang -->
+        <div id="pagination" class="text-center">
+            <button id="prev" class="btn btn-primary">Previous</button>
+            <span id="page-number">Page 1</span>
+            <button id="next" class="btn btn-primary">Next</button>
+        </div>
+    </div>
+</div>
+
+<!-- Sales Policy -->
+<div class="main__policy container-fluid py-3">
+    <div class="row">
+        <div class="col l-3 m-6">
+            <div class="policy bg-1">
+                <img
+                    src="https://phuonggiang150.github.io/FrontEnd-Sell-Cosmetics/./assets/img/policy/policy1.png"
+                    class="policy__img">
+                <div class="policy__info">
+                    <h3 class="policy__title">GIAO HÀNG MIỄN PHÍ</h3>
+                    <p class="policy__description">Cho đơn hàng từ 300K</p>
+                </div>
+            </div>
+        </div>
+        <div class="col l-3 m-6">
+            <div class="policy bg-2">
+                <img
+                    src="https://phuonggiang150.github.io/FrontEnd-Sell-Cosmetics/./assets/img/policy/policy2.png"
+                    class="policy__img">
+                <div class="policy__info">
+                    <h3 class="policy__title">ĐỔI TRẢ HÀNG</h3>
+                    <p class="policy__description">Trong 3 ngày đầu tiên</p>
+                </div>
+            </div>
+        </div>
+        <div class="col l-3 m-6">
+            <div class="policy bg-1">
+                <img
+                    src="https://phuonggiang150.github.io/FrontEnd-Sell-Cosmetics/./assets/img/policy/policy3.png"
+                    class="policy__img">
+                <div class="policy__info">
+                    <h3 class="policy__title">HÀNG CHÍNH HÃNG</h3>
+                    <p class="policy__description">Cam kết chất lượng</p>
+                </div>
+            </div>
+        </div>
+        <div class="col l-3 m-6">
+            <div class="policy bg-2">
+                <img
+                    src="https://phuonggiang150.github.io/FrontEnd-Sell-Cosmetics/./assets/img/policy/policy4.png"
+                    class="policy__img">
+                <div class="policy__info">
+                    <h3 class="policy__title">TƯ VẤN 24/24</h3>
+                    <p class="policy__description">Giải đáp mọi thắc mắc</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog"
+    aria-labelledby="modelTitleId" aria-hidden="true"
+    *ngIf="proDetail ">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Chi tiết sản phẩm</h3>
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card text-left">
+                            <img class="card-img-top"
+                                src="http://localhost:3002/image/{{proDetail.image}}"
+                                alt>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <h3>Tên sản phẩm: {{proDetail.name}}</h3>
+                        <h4>Giá sản Phẩm: <s>Giá cũ:{{proDetail.price}}</s>
+                            <b>Giá Khuyến mãi: {{proDetail.sale_price}}</b>
+                        </h4>
+                        <p>Giới thiệu sản phẩm:{{proDetail.description}} </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"
+                    data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  ```                                                                                                                                                                                   -->
+<div class="modal fade" id="modal-login" tabindex="-1" role="dialog"
+    aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Form login</h5>
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action method="POST" [formGroup]="formLogin"
+                    (submit)="onLogin()">
+                    <div class="alert alert-danger">
+                        <button type="button" class="close" data-dismiss="alert"
+                            aria-hidden="true">&times;</button>
+                        <strong>{{error}}!</strong>
+                    </div>
+
+                    <div class="form-group">
+                        <label for>Email</label>
+                        <input type="text" class="form-control"
+                            formControlName="email" placeholder="Input Email">
+                        <div
+                            *ngIf="f['email'].touched && f['email'].invalid && f['email'].errors">
+                            <div *ngIf="f['email'].errors['required']">Email
+                                không để trống.</div>
+                            <div *ngIf="f['email'].errors['email']">Email không
+                                đúng định dạng</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for>Password</label>
+                        <input type="password" class="form-control"
+                            formControlName="password"
+                            placeholder="Input Password">
+                        <div
+                            *ngIf="f['password'].touched && f['password'].invalid && f['password'].errors">
+                            <div *ngIf="f['password'].errors['required']">Mật
+                                khẩu không để trống.</div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"
+                        [disabled]="f['email'].errors || f['password'].errors">login</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

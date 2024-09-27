@@ -1,0 +1,132 @@
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<div class="container py-3 ">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="container">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-3">Thông tin Shop</h1>
+                        <p class="lead">Hàng thật giá thật</p>
+                        <div class="product__avt product"
+                            style="background-image: url(https://minhnguyenhn.com/wp-content/uploads/2018/06/cach-chon-trai-cay-nhap-khau-tuoi-sach-5.jpg);">
+                        </div>
+
+                        <p>
+                            Loại thực phẩm tốt cho sức khỏe, bổ sung nhiều vitamin, dưỡng chất, cung cấp cho cơ thể con
+                            người năng lượng quý giá thay vì rượu, hoa và một số quà tặng khác. Không chỉ vậy, sử dụng
+                            hộp quà trái cây làm quà tặng cũng chính là cách để chúng ta góp phần bảo vệ môi trường.Bên
+                            cạnh đó, Giỏ quà hoa quả nhập khẩu - TC54 còn biểu trưng cho sự đầy đặn, sung túc, màu sắc
+                            hòa quyện vào nhau tạo nên một hình ảnh thật đẹp mắt.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-4" boder="1px">
+            <h2>Danh mục</h2>
+            <ul class="list-group">
+                <a routerLink="/category/{{cat.id}}" class="list-group-item" *ngFor="let cat of cats">{{cat.name}}</a>
+            </ul>
+            <hr>
+            <div class="jumbotron">
+                <h2>Dâu tây nhập khẩu</h2>
+                <h4>다른 의미의 동음이의어에 대한 내용은 딸기(동음이의어) 문서를 참고하십시오.</h4>
+                <div class="col l-2 m-4 s-6">
+                    <div class="product">
+                        
+                        <div class="product__avt"
+                            style="background-image: url(https://hoaquafuji.com/storage/app/media/dau-tay-han-quoc-fuji-4.jpg);">
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__name">Dâu tây Hàn Quốc</h3>
+                            <div class="product__price">
+                                <div class="price__old">
+                                    600.000đ
+                                </div>
+                                <div class="price__new">450.000đ </div>
+                            </div>
+                            <div class="product__sale">
+                                <span class="product__sale-percent">25%</span>
+                                <span class="product__sale-text">Giảm</span>
+                            </div>
+                        </div>
+                        <a href="https://vinfruits.com/dau-tay-han-quoc-hop" class="viewDetail">Xem chi tiết</a>
+                        <a href="cart.html" class="addToCart">Thêm vào giỏ</a>
+                    </div>
+                </div>
+                <p>재배종 딸기가 나오기 이전에도 Fragaria속 중에는 '흰땃딸기'[1]나 사향딸기처럼 먹을만한 야생딸기가 존재했으나, 대부분 극지와 가까운 고위도 지역이나 고산지대에서 자라는 종들이었고 고온에 약했으므로 일반적인 온대 지역에서 인공적으로 키우기 부적합했다.</p>
+
+                 <p>지금 우리가 먹는 빨갛고 도톰한 딸기는 실제로는 만들어진지 200년 정도밖에 되지 않았다. 현재의 딸기는 다른 식용품들[2]과 마찬가지로 인간이 인위적으로 만든 것이다. </p>
+                
+                </div>
+
+        </div>
+    </div>
+    <div class="main__tabnine">
+        <div class="grid wide">
+            <!-- Tab items -->
+            <div class="tabs">  
+                <div class="tab-item active">
+                    <h3>Sản phẩm của shoop</h3>
+                </div>
+                <div class="line"></div>
+            </div>
+            <!-- Tab content -->
+            <div class="tab-content" *ngIf="products.length">
+                <div>
+                    <h2>
+                        Sản Phẩm theo tên Danh mục
+                    </h2>
+                </div>
+                <div class="tab-pane active">
+                    <div class="row">
+                        <div class="col l-2 m-4 s-6" *ngFor="let pro of products">
+                            <div class="product">
+                                <div class="product__avt"
+                                    style="background-image: url(http://localhost:3002/image/{{pro.image}});">
+                                </div>
+                                <div class="product__info">
+                                    <h3 class="product__name">{{pro.name}}</h3>
+                                    <div class="product__price">
+                                        <div class="price__old">
+                                            <p> {{pro.price}}đ </p>
+                                        </div>
+                                        <div class="price__new">450.000đ </div>
+                                    </div>
+                                    <div class="product__sale">
+                                        <span class="product__sale-percent">25%</span>
+                                        <span class="product__sale-text">Giảm</span>
+                                    </div>
+                                </div>
+                                <a (click)="showdt(pro)"  class="viewDetail" style="cursor: pointer;" >Xem chi tiết</a>
+                                <a href="cart.html" class="addToCart">Thêm vào giỏ</a>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+              
+            </div>
+            <div class="tab-content" *ngIf="!products.length">
+                
+                <div class="alert alert-danger" style="width: 100%; height: 100px;">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Title!</strong> Không có sản phẩm nào theo tên danh mục trên
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

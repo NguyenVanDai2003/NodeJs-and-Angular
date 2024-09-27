@@ -1,0 +1,55 @@
+<%- include('header')%>
+
+            <div class="container">
+                <h2>Sản phẩm</h2>
+                
+               
+               <form action="" method="GET" class="form-inline" role="form">
+               
+                <div class="form-group">
+                    <input class="form-control" name="key" placeholder="Tìm kiếm">
+                </div>
+                <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+               <a href="/create-product" class="btn btn-primary">Thêm mới sản phẩm</a>
+
+               </form>
+               
+            
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>price</th>
+                        <th>sale_price</th>
+                        <th>image</th>
+                        <th>category_id</th>
+                        <th>status</th>
+                        <th>description</th>
+                        <th>created_at</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% pros.forEach((item,key) =>{ %>
+                    <tr>
+                        <td><%= item.id %></td>
+                        <td><%= item.name %></td>
+                        <td><%= item.price %></td>
+                        <td><%= item.sale_price %></td>
+                        <td>
+                            <img src="http://localhost:3002/image/<%=item.image %>" alt="" width="70">
+                        </td>
+                        <td><%= item.cat_name %></td>
+                        <td><%= item.status == 0 ? 'Tạm ẩn' : 'Hiển thị' %></td>
+                        <td><%= item.description %></td>
+                        <td><%= item.created_at %></td>
+                        <td>
+                            <a onclick="return confirm('Okaya')" href="/delete-product<%= item.id %>" class="btn btn-outline-danger btn-danger">Xóa</a>
+                        </td>
+                        <td> <a  href="/edit-product<%= item.id %>" class="btn btn-outline-danger btn-primary">Sửa</a> </td>
+                    </tr>         
+                    <% }) %>
+                </tbody>
+            </table>
+            </div>
+<%- include('footer')%>

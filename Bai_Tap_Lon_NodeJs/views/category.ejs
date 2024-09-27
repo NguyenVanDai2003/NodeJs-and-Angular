@@ -1,0 +1,44 @@
+<%- include('header')%>
+
+    <div class="container">
+        <h2>Danh mục</h2>
+
+        <a href="/create-category" class="btn btn-primary">Thêm mới danh mục</a>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>name</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% cast.forEach((item,key)=>{ %>
+                    <tr>
+                        <td>
+                            <%= item.id %>
+                        </td>
+                        <td>
+                            <%= item.name %>
+                        </td>
+                        <td>
+                            <%= item.status==0 ? 'Tạm ẩn' : 'Hiển thị' %>
+                        </td>
+                        <td>
+                            <a onclick="return confirm('Okaya')" href="/delete-category<%= item.id %>"
+                                class="btn btn-outline-danger btn-danger">Xóa</a>
+                            <a href="/edit-category<%= item.id %>" class="btn btn-outline-danger btn-primary">Sửa</a>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+    </div>
+    <%- include('footer')%>
